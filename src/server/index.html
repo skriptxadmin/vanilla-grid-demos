@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server</title>
+    <link rel="stylesheet" href="../assets/pico.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="../index.html">Home</a>
+
+      <p>Vanilla Grid is a lightweight and efficient CSS grid system that simplifies responsive layouts, making it an excellent choice for server-side rendering (SSR). Its minimalistic approach ensures faster load times, as it avoids heavy dependencies or unnecessary styles. With SSR, the grid layout is pre-rendered on the server, enhancing performance and improving SEO by delivering a fully-structured HTML to the client. Vanilla Grid's intuitive class-based system seamlessly integrates into SSR frameworks like Next.js or Express.js. Its small size and ease of use make it ideal for building scalable, responsive applications with clean, maintainable code while prioritizing performance and user experience.</p>
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+          </tbody>
+        </table>
+      </div>
+      <div class="wrapper flex justify-between items-center">
+
+      </div>
+      <div>
+        <pre>
+          <code>
+            import { VanillaServerGrid } from "@skriptx2/vanillagrid";
+
+window.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.querySelector(".wrapper");
+  const table = document.querySelector("table");
+  const tbody = table.querySelector("tbody");
+
+  drawTable(1);
+
+  async function drawTable(page) {
+    const itemsPerPage = 3;
+
+    const url = `https://jsonplaceholder.typicode.com/users/?_page=${page}&_limit=${itemsPerPage}`;
+
+    const response = await fetch(url);
+    const users = await response.json();
+    const headers = response.headers;
+    const trs = users
+      .map((user) => {
+        return `<tr><td>${user.id}</td><td>${user.name}</td><td>${user.username}</td><td>${user.email}</td></tr>`;
+      })
+      .join("");
+    tbody.innerHTML = trs;
+
+    const instance = new VanillaServerGrid(wrapper, {
+      itemsPerPage: itemsPerPage,
+      totalItems: headers.get("x-total-count"), // https://github.com/typicode/jsonplaceholder/issues/65
+      currentPage: page,
+      info: "Showing :start to :end of :total entries",
+      classNames: {},
+    });
+
+    instance.addEventListener("onPageChange", function ({ detail }) {
+      drawTable(detail.pageSelected);
+    });
+  }
+});
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

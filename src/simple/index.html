@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/pico.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <div>
+        The grid system is implemented using Vanilla Grid, a lightweight CSS grid solution, which is imported dynamically through a separate JavaScript file. This modular approach ensures that the grid-related logic is decoupled from the main HTML.
+      </div>
+    
+    <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Generating 25 rows -->
+          <!-- Each row contains dummy data -->
+          <tr><td>1</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>2</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>3</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>4</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>5</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>6</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>7</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>8</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>9</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>10</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>11</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>12</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>13</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>14</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>15</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>16</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>17</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>18</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>19</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>20</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>21</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>22</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>23</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>24</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+          <tr><td>25</td><td>Data 1</td><td>Data 2</td><td>Data 3</td></tr>
+        </tbody>
+      </table>
+      <pre>
+        <code>
+          import { VanillaGrid } from '@skriptx2/vanillagrid';
+
+window.addEventListener('DOMContentLoaded', function(){
+
+    const table = document.querySelector("table");
+
+    new VanillaGrid(table, {
+        itemsPerPage:4,
+        info:'Showing :start to :end of :total entries',
+    })
+
+})
+
+        </code>
+      </pre>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

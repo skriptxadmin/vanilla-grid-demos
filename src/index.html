@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/pico.min.css" />
+  </head>
+  <body>
+  
+
+    <div class="container">
+      <h1>Vanilla Grid: A Lightweight Alternative to DataTables.net</h1>
+      <p>
+        In the world of web development, working with tabular data is a common
+        requirement. Popular tools like DataTables.net provide extensive
+        features, but they often come with heavy dependencies, larger file
+        sizes, and performance trade-offs for smaller projects. For developers
+        seeking a lightweight, dependency-free, and efficient grid solution,
+        Vanilla Grid is an excellent alternative. With a file size of only 8KB,
+        Vanilla Grid proves that less is more when it comes to simplicity and
+        speed.
+      </p>
+      <h3>What is Vanilla Grid?</h3>
+      <p>
+        Vanilla Grid is a minimalist JavaScript library designed for rendering
+        and managing tabular data in web applications. Unlike traditional grid
+        libraries that rely on frameworks like jQuery or large JavaScript
+        ecosystems, Vanilla Grid is completely dependency-free. Its small
+        footprint ensures rapid loading times and makes it particularly suited
+        for projects where performance and simplicity are paramount.
+      </p>
+      <h3>Key Features of Vanilla Grid</h3>
+      <ol>
+        <li>
+          <strong>Lightweight and Fast</strong>: At just 8KB, Vanilla Grid
+          minimizes the impact on your application's load time.
+        </li>
+        <li>
+          <strong>Dependency-Free</strong>: It doesn't rely on jQuery, React, or
+          any other libraries, making integration straightforward and
+          conflict-free.
+        </li>
+        <li>
+          <strong>Easy to Use</strong>: With a simple API, Vanilla Grid allows
+          developers to quickly set up and configure tables.
+        </li>
+        <li>
+          <strong>Customizable</strong>: Despite its small size, it offers
+          flexibility in terms of styling and functionality.
+        </li>
+        <li>
+          <strong>Responsive Design</strong>: Vanilla Grid ensures your tables
+          look great on all devices.
+        </li>
+        <li>
+          <strong>Core Functionality</strong>: Provides essential features like
+          sorting, filtering, and pagination without the bloat of unnecessary
+          options.
+        </li>
+      </ol>
+      <h3>Why Choose Vanilla Grid Over DataTables.net?</h3>
+      <p>
+        While DataTables.net is a powerful tool, it may not always be the right
+        fit for every project. Here's why Vanilla Grid could be a better choice:
+      </p>
+      <ul>
+        <li>
+          <strong>Smaller Projects</strong>: For simple applications or
+          dashboards, DataTables.net's extensive feature set can be overkill.
+          Vanilla Grid provides just what you need without the overhead.
+        </li>
+        <li>
+          <strong>No Dependencies</strong>: DataTables.net relies on jQuery,
+          which can increase your project's size and complexity. Vanilla Grid
+          operates independently, simplifying development.
+        </li>
+        <li>
+          <strong>Performance</strong>: In scenarios with smaller datasets or
+          limited client-side processing, Vanilla Grid's lightweight nature
+          ensures snappy performance.
+        </li>
+        <li>
+          <strong>Customization</strong>: Vanilla Grid's straightforward
+          architecture makes it easy to tailor to your project's specific needs
+          without diving into a complex configuration.
+        </li>
+      </ul>
+      <h3>Getting Started with Vanilla Grid</h3>
+      <p>Here's a quick guide to setting up and using Vanilla Grid:</p>
+      <ol>
+        <li>
+          <strong>Download Vanilla Grid</strong>: Grab the latest version from
+          the official repository or CDN.
+        </li>
+        <li>
+          <p>
+            <strong>Include the Script</strong>: Add the Vanilla Grid JavaScript
+            file to your project:
+          </p>
+          <pre>
+            <code class="lang-html">
+                &lt;script type="module"&gt;
+                    import {VanillaGrid} from './dist/vanillagrid.js';
+                  window.addEventListener("DOMContentLoaded", function () {
+                    const table = document.querySelector("table");
+            
+                    new VanillaGrid(table, {
+                      itemsPerPage: 4,
+                      info:'Showing :start to :end of :total entries',
+                    });
+                  });
+                  &lt;/script&gt;
+            </code>
+        </pre>
+        </li>
+        <li>
+            <p>
+              <strong>View other Examples</strong>: 
+
+            </p>
+            <ul>
+                <li><a href="./default/index.html">Default</a></li>
+                <li><a href="./simple/index.html">Simple</a></li>
+                <li><a href="./bootstrap/index.html">Bootstrap</a></li>
+                <li><a href="./bulma/index.html">Bulma</a></li>
+                <li><a href="./server/index.html">Server</a></li>
+                
+            </ul>
+          </li>
+      
+        <li>
+          <p>
+            <strong>Style Your Table</strong>: Apply custom styles via CSS to
+            match your application's design.
+          </p>
+        </li>
+      </ol>
+      <h3>When to Use Vanilla Grid</h3>
+      <p>Vanilla Grid is ideal for projects that:</p>
+      <ul>
+        <li>Prioritize performance and simplicity.</li>
+        <li>Avoid adding unnecessary dependencies.</li>
+        <li>Handle small to medium-sized datasets.</li>
+        <li>
+          Require only core table functionalities like sorting and filtering.
+        </li>
+      </ul>
+      <h3>Limitations to Consider</h3>
+      <p>
+        While Vanilla Grid offers many advantages, it may not be the best choice
+        for every use case. For large-scale enterprise applications requiring
+        advanced features like server-side processing, dynamic column
+        generation, or extensive plugin ecosystems, more robust libraries like
+        DataTables.net may be preferable.
+      </p>
+      <h3>Conclusion</h3>
+      <p>
+        Vanilla Grid strikes an elegant balance between functionality and
+        minimalism. Its lightweight, dependency-free nature makes it a
+        compelling choice for developers looking for a simple yet effective grid
+        solution. By opting for Vanilla Grid, you can create fast, responsive,
+        and easily customizable tables without the bloat of larger libraries.
+        Whether you're building a personal project or a professional
+        application, Vanilla Grid is worth considering as a streamlined
+        alternative to traditional grid tools.
+      </p>
+    </div>
+  </body>
+</html>
